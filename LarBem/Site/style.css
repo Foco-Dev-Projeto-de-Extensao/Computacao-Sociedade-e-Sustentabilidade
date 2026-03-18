@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('imagens/fundo5.jpg') no-repeat center center fixed; 
+  background-size: cover; /* Faz a imagem cobrir a tela inteira sem esticar errado */
+  color: #111;
+}
+
+/* NAV */
+
+.nav {
+  width: 100%;             
+  background-color: transparent;
+  padding: 40px 5%;       /* Ajuste do espaço no topo */
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 550;        
+  letter-spacing: 1px;
+}
+
+
+.nav a {
+  text-decoration: none;
+  color: #111;
+  white-space: nowrap;
+  transition: color 0.2s ease; /* 0.2 segundos de suavidade */
+}
+
+.nav a:hover {
+  color: #ff3091;          /* Cor rosa ao passar o mouse */
+}
+
+
+/* MAIN */
+.container {
+  max-width: 1400px; /* ocupar a tela */
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 40px; 
+}
+
+
+/* TEXTO */
+.hero-left {
+  flex: 1;
+}
+
+.logo-text span {
+  color: #f30574;
+}
+
+.logo-text {
+  font-size: 130px; /* Bem grande kjasjksjksjak */
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.linha {
+  width: 520px;     /* linha maiorzinha */
+  height: 0.5px;      /* fininha */
+  background: #242424;
+  margin: 40px 0;   /* respiro */
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.descricao {
+  max-width: 4500px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* CARD */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  width: 380px; 
+  height: 380px;
+  flex-shrink: 0;
+  animation: flutuar 3s ease-in-out infinite; 
+}
+
+
+.card-bg {
+  position: absolute;
+  bottom: -20px;  
+  right: -20px;   
+  width: 100%;
+  height: 100%;
+  background: #4b333c;
+  filter: blur(15px); /*EMBAÇADO */
+  opacity: 0.7;        /* Deixa a sombra um pouco mais suave/transparente */
+  z-index: -1;        /* Garante que fique atrás do card branco */
+}
+
+
+.card-content {
+  border-radius: 20px 20px 20px 20PX; /*colocando um arredondamento suave*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.5px solid #111; /* Borda um pouco mais grossa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* Mais espaço interno para o logo respirar */
+}
+
+
+.card-content img {
+  max-width: 100%;
+  width: 650px;
+  height: auto;
+}
+
+
+/* Define o movimento de subir e descer */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0); /* Posição inicial */
+  }
+  50% {
+    transform: translateY(-20px); /* Sobe 20 pixels */
+  }
+  100% {
+    transform: translateY(0); /* Volta ao início */
+  }
+}
+
+/* ======================================================================================================= */
+
+/* ------------ SEÇÃO VALORES ---------------- */
+.valores-titulo span {
+  color: #af40ff;
+}
+
+.valores-section {
+  width: 100%;
+  padding: 100px 60px;
+  /* Degradê suave de fundo igual à imagem */
+  background: linear-gradient(to bottom, transparent, #f3a6eb, #e5bdff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valores-titulo {
+  font-size: 110px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* GRID DOS CARDS */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 60px 40px; /* Espaço entre os cards */
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ESTILO DOS MINI CARDS */
+.valor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.valor-card:hover{
+  transform: translateY(-10px); /* Eleva o elemento em 10px */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adiciona sombra para efeito 3D */
+}
+
+.valor-bg {
+  border-radius: 20px 20px 20px 20PX;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background: #4b333c; /* Rosa sólido da sombra */
+
+  filter: blur(15px); /*EMBAÇADO */
+  opacity: 0.7;        /* Deixa a sombra um pouco mais suave/transparente */
+  z-index: -1;        /* Garante que fique atrás do card branco */
+
+  border: 2px solid #111;
+  z-index: 1;
+}
+
+.valor-content {
+  border-radius: 20px 20px 20px 20PX;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fdf5e6; /* Cor bege clarinha do card */
+  border: 2px solid #111;
+  
+
+
+  padding: 30px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.valor-content h3 {
+  font-size: 24px;
+  text-align: right; /* Alinhado à direita como na imagem */
+  line-height: 1.1;
+}
+
+.valor-content p {
+  font-size: 18px;
+  line-height: 1.4;
+  max-width: 250px;
+}
+
+
+/* ======================================================================================================= */
+
+/* ------------ TERCEIRA SEÇÃO VALORES ---------------- */
+
+
+
+.TITULO-terceira-sec span {
+  color: #d700fd;
+}
+
+.TITULO-terceira-sec {
+  font-size: 130px; /* Bem grande kjasjksjksjak */
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+/* EDIÇÃO DOS CARDS */
