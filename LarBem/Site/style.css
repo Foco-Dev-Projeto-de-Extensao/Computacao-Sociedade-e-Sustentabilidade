@@ -353,7 +353,7 @@ body {
 
 .banner{
   width: 100%;
-  height: 300px; /*altura do cabeçalho*/
+  height: 250px; /*altura do cabeçalho*/
   background-image: url(imagens/Team\ spirit-bro.png);
   background-size: cover; /*serve para cobrir toda a área*/
   background-position: center;
@@ -361,14 +361,35 @@ body {
 
 }
 
-
-
-.loja-text span {
-  color: #f30574;
+.secao-nossa-loja {
+  background-color: #ff4eb8; 
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;       
+  padding: 80px 10%;
+  min-height: 450px;
 }
 
-.loja-content {
-  font-size: 80px; /* Bem grande kjasjksjksjak */
-  line-height: 1;
-  letter-spacing: -5px;
+.bloco-texto {
+  max-width: 450px;         
+  text-align: right;          
 }
+
+.bloco-texto h1 {
+  font-size: 110px;          
+  font-weight: 800;
+  line-height: 0.85;         
+  letter-spacing: -5px;      
+  margin-bottom: 30px;
+}
+
+.bloco-texto p {
+  font-size: 22px;           
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.bloco-texto span{
+  color: #5d00ff;
+}
+
