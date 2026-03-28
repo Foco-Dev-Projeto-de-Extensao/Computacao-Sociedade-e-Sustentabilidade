@@ -418,7 +418,7 @@ body {
 
 /* PARTE DA DOAÇÃO PARA O BAZAR */
 
-/* ---------------- SEÇÃO DOAÇÃO ---------------- */
+/* ------------------------------------------------------------------- 'QUINTA SEÇÃO'   SEÇÃO DOAÇÃO ----------------------------------------- */
 
 .doacao-section {
   background-color: #9055C8; 
@@ -434,7 +434,7 @@ body {
   align-items: center;
 }
 
-/* LADO ESQUERDO */
+/*    L A D O               E S Q U E R D O */
 .categorias-grid {
   flex: 1;
   display: flex;
