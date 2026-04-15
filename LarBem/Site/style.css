@@ -4,88 +4,105 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background: url('imagens/fundo5.jpg') no-repeat center center fixed; 
-  background-size: cover; /* Faz a imagem cobrir a tela inteira sem esticar errado */
   color: #111;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Configurações da Imagem de Fundo */
+  background-image: url("imagens/fundo6.png"); /* Alterado para fundo6 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
 }
 
-/* ----------------------------------------------------------------------- PRIMEIRA SEÇÃO (INTRO) ---------------------------------------------- */
 
-/* CONTAINER DO MENU */
+
+/* ---------------------------------------------------------------- PRIMEIRA SEÇÃO -------------------------------------------------- */
+
+/* ------------------- CABEÇALHO ------------------- */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 .nav {
   width: 100%;             
-  background-color: transparent;
   padding: 40px 5%;       
   display: flex;
-  /* Distribui o espaço entre os itens p preencher a largura */
   justify-content: space-around; 
   align-items: center;
-  gap: 15px; /* Espaço mínimo entre os botões */
-  flex-wrap: nowrap; /* na mesma linha para preencher o espaçp do tpop */
+  gap: 15px;
 }
 
-/* BOTÕES DO MENU */
 .nav a {
   text-decoration: none;
   color: #111;
-  background-color: #FDF5E6;
+  background-color: #f8f4eb;
   padding: 12px 30px; 
   border-radius: 50px;
   border: 3px solid #111;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
   box-shadow: 4px 4px 0px #111; 
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav a:hover {
   transform: translate(-3px, -3px);
   box-shadow: 7px 7px 0px #111;
-  background-color: #fff;
-  color: #ff3091;
+  color: #f30574;
 }
 
-/* Efeito de clicar */
-.nav a:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #111;
-}
-
-/* MAIN */
 .container {
-  max-width: 1400px; /* ocupar a tela */
-  margin: 80px auto;
+
+  
+
   display: flex;
-  justify-content: space-between;
-  padding: 0 60px;
-  gap: 40px; 
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;
+  width: 100%; /* Garante que ocupa toda a largura */
+  margin: 0;   /* Remove o auto que centraliza */
+  padding: 80px 60px 0 60px;
+  gap: 120px; 
 }
 
-/* TEXTO */
+
 .hero-left {
-  flex: 1;
+  flex: 0 1 auto; /* Impede que o texto empurre o card */
+  max-width: 600px; /* Limita a largura do texto para ele não encostar no card */
+}
+
+.logo-text {
+  font-size: 130px;
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin: 0;
 }
 
 .logo-text span {
   color: #f30574;
 }
 
-.logo-text {
-  font-size: 130px; /* Bem grande kjasjksjksjak */
-  line-height: 0.9;
-  letter-spacing: -5px;
-}
-
 .linha {
-  width: 520px;     /* linha do coiso */
-  height: 0.5px;      /* fininha */
+  width: 520px;
+  height: 1px;
   background: #242424;
-  margin: 40px 0;   /* respiro */
+  margin: 30px 0;
 }
 
 .titulo {
@@ -95,24 +112,20 @@ body {
 }
 
 .descricao {
-  max-width: 4500px;
+  max-width: 500px; /* Mantém o parágrafo em um bloco legível */
   font-size: 20px;
   line-height: 1.6;
 }
 
-/* CARD */
+/* CARD COM ANIMAÇÃO */
 .hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+    flex: 0 0 auto; 
 }
 
-/* CARD */
 .card {
   position: relative;
   width: 380px; 
   height: 380px;
-  flex-shrink: 0;
   animation: flutuar 3s ease-in-out infinite; 
 }
 
@@ -123,18 +136,17 @@ body {
   width: 100%;
   height: 100%;
   background: #4b333c;
-  filter: blur(15px); /*EMBAÇADO */
-  opacity: 0.7;        /* Deixa a sombra um pouco mais transparente */
-  z-index: -1;        /* Garante que fique atrás do card branco */
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 .card-content {
-  border-radius: 20px 20px 20px 20PX; /*arredondamento*/
-  position: relative;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   background: #fff;
-  border: 3px solid #111; /* borda mais grossa */
+  border: 3px solid #111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,34 +155,21 @@ body {
 
 .card-content img {
   max-width: 100%;
-  width: 650px;
   height: auto;
 }
 
-/* Define o movimento de subir e descer       ANIMAÇÃO        */
 @keyframes flutuar {
-  0% {
-    transform: translateY(0); /* Posição inicial */
-  }
-  50% {
-    transform: translateY(-20px); /* Sobe 20 pixels */
-  }
-  100% {
-    transform: translateY(0); /* Volta ao início */
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-/* ---------------------------------------------------------------------- SEÇÃO VALORES (SEGUNDA SEÇÃO) ---------------------------------------- */
 
-.valores-titulo span {
-  color: #ff5757;
-}
+
+/* ---------------------------------------------------- SEÇÃO VALORES (SEGUNDA SEÇÃO) -------------------------------------------- */
 
 .valores-section {
   width: 100%;
-  padding: 100px 60px;
-  /* Degradê suave de fundo à imagem */
-  background: linear-gradient(to bottom, transparent, #ff98ec, #e5bdff);
+  padding: 60px 60px 100px 60px; /* Reduz o padding do topo de 100 para 60 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,62 +182,67 @@ body {
   margin-bottom: 60px;
   width: 100%;
   max-width: 1100px;
+  text-align: center;
 }
 
-/* GRID DOS CARDS */
+.valores-titulo span {
+  color: #000000;
+}
+
 .valores-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  gap: 60px 40px; /* Espaço entre os cards */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   max-width: 1100px;
   width: 100%;
 }
 
-/* ESTILO DOS MINI CARDS */
-.valor-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  width: 100%;
-  height: 250px;
-}
-.valor-card:hover{
-  transform: translateY(-10px); /* Eleva o elemento em 10px */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adiciona sombra para efeito 3D */
-}
-
-.valor-bg {
-  display: none; 
-}
-
-.valor-card {
-  height: 250px; 
-  transition: all 0.8s ease;
-}
-
 .valor-content {
-  border-radius: 30px; /*arredondamento */
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #fdf5e6;
+  border-radius: 30px;
+  background: #f8f4eb;
   border: 3px solid #111;
   padding: 30px;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* A MESMA SOMBRA DO BOTÃO */
+  justify-content: center;
   box-shadow: 8px 8px 0px #111; 
+  
+  opacity: 0;
+  transform: translateY(50px);
+  
+  transition: transform 0.4s ease, box-shadow 0.3s ease, opacity 0.8s ease-out;
 }
+
+.valor-content.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.valor-card:nth-child(1) .valor-content.aparecer { transition-delay: 0.1s; }
+.valor-card:nth-child(2) .valor-content.aparecer { transition-delay: 0.3s; }
+.valor-card:nth-child(3) .valor-content.aparecer { transition-delay: 0.5s; }
+.valor-card:nth-child(4) .valor-content.aparecer { transition-delay: 0.7s; }
+
+.valor-card:hover .valor-content.aparecer {
+  transform: translate(-6px, -6px);
+  box-shadow: 14px 14px 0px #111;
+  /* Removemos o delay no hover para ser instantâneo */
+  transition-delay: 0s !important; 
+}
+
+.valores-grid .valor-card:nth-child(2) .valor-content {
+  transition-delay: 0.2s;
+}
+.valores-grid .valor-card:nth-child(3) .valor-content {
+  transition-delay: 0.4s;
+}
+
+
 
 .valor-card:hover .valor-content {
   transform: translate(-4px, -4px);
   box-shadow: 12px 12px 0px #111;
-}
-
-.valor-content p {
-  font-size: 18px;
-  line-height: 1.4;
-  max-width: 250px;
 }
 
 
@@ -248,7 +252,8 @@ body {
 .servicos-section {
   width: 100%;
   min-height: 100vh;
-  background-color: #e5bdff;
+  
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,7 +304,7 @@ body {
 }
 
 .servico-item {
-  background-color: #FDF5E6;
+  background-color: #f8f4eb;
   height: 75px; 
   width: 100%;
   border-radius: 50px;
@@ -362,7 +367,7 @@ body {
 .marquee-content2 {
   display: flex;
   white-space: nowrap;
-  animation: girar-faixa 50s linear infinite; /* Velocidade da animação */
+  animation: girar-faixa 35s linear infinite; /* Velocidade da animação */
 }
 
 .marquee-content2 span {
@@ -425,7 +430,7 @@ body {
 
 /* PARTE DA DOAÇÃO PARA O BAZAR */
 
-/* ------------------------------------------------------------------- 'QUINTA SEÇÃO'   SEÇÃO DOAÇÃO ----------------------------------------- */
+/* ------------------------------------------------------------------- 'QUINTA SEÇÃO'   SEÇÃO DOAÇÃO ------------------------------ */
 
 .doacao-section {
   background-color: #9055C8; 
@@ -546,27 +551,26 @@ body {
 /* FAIXA ANIMADA */
 .marquee {
   width: 100%;
+
   background-color: #fff; 
   border-top: 3px solid #111;
   border-bottom: 3px solid #111;
+  
   overflow: hidden; /* Esconde o que sai da tela */
   padding: 10px 0;
   display: flex;
 }
-
 .marquee-content {
   display: flex;
   white-space: nowrap;
-  animation: girar-faixa 20s linear infinite; /* Velocidade da animação */
+  animation: girar-faixa 35s linear infinite; /* Velocidade da animação */
 }
-
 .marquee-content span {
   font-size: 20px;
   font-weight: 600;
   color: #ff5757; 
   padding: 0 10px;
 }
-
 @keyframes girar-faixa {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); } /* Move metade, faz parecr infinito */
@@ -574,10 +578,12 @@ body {
 
 /* CONTEÚDO DA SEÇÃO */
 .ajudar-section {
-  background-color: #fdf5e6; 
   padding: 80px 10%;
   text-align: center;
-  border-bottom: 3px solid #111;
+  /*
+  background-image: url(imagens/fundo4.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .ajudar-titulo {
@@ -586,6 +592,15 @@ body {
   margin-bottom: 30px;
   letter-spacing: -3px;
 }
+
+.ajudar-titulo span{
+  transition: color 0.3s ease;
+}
+
+.ajudar-titulo span:hover {
+  color: #c300ff;
+}
+
 
 .ajudar-descricao {
   max-width: 800px;
@@ -642,9 +657,23 @@ body {
   }
 }
 
-.ajudar-section{
-  background: url(imagens/fundo5.jpg);
-}
 
 /*----------------------------------------------------------------------- SÉTIMA SEÇÃO ---------------------------------------------------------*/
 
+
+
+
+
+/* FOOTER  */
+footer {
+  border-top: 1px solid #ccc;
+  padding: 22px 40px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.7;
+  
+  background: #fff;
+  background-size: auto;
+  background-repeat: repeat;
+}
