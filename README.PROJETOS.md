@@ -1,3 +1,14 @@
+## INTRIUIÇÃO
+- UNIVERSIDADE CATÓLICA DE PERNAMBUCO
+- CURSO DE CIÊNCIAS DA COMPUTAÇÃO
+
+## 👥 Equipe do Projeto
+
+| MATRÍCULA | NOME E SOBRENOME |
+| :--- | :--- |
+| **[SUA MATRÍCULA]** | [SEU NOME COMPLETO] |
+
+
 # Computação, Sociedade e Sustentabilidade
 
 💻 Projeto de extensão universitária voltado ao desenvolvimento de soluções digitais e estratégias sociais para apoiar instituições locais, incluindo a prototipagem de um site para o LARBEM e a organização de iniciativas de captação de recursos para o grupo Partilhar.
