@@ -1,6 +1,6 @@
 # 💻 Projeto: Site Institucional - Lar Bem Elizabeth (Extensão)
 
-> Status: 🚀 Em Desenvolvimento / ✅ Interface Prototipada
+> Status: 🟥 Em Desenvolvimento | ✅ Interface Prototipada | 🟥 Kanbam
 
 ## 📖 Sobre o Projeto
 Este site foi desenvolvido como parte de um projeto de extensão universitária para apoiar o **Lar Bem Elizabeth**, localizado em Recife/PE. O objetivo é criar uma ponte digital entre a instituição e a comunidade, facilitando a doação de materiais e a divulgação do bazar solidário.
@@ -14,23 +14,9 @@ A interface foi projetada com foco em acessibilidade e modernidade, utilizando o
 
 | Cor | Hexadecimal |
 | :--- | :--- |
-| **Roxo** | `#6A0DAD` |
-| **Rosa** | `#E91E63` |
-| **Laranja** | `#FF9800` |
-
-## 🖼️ Demonstração Visual (Prints do Sistema)
-
-### 1. Navegação Estruturada
-O menu superior permite acesso rápido às áreas de doação e serviços, utilizando botões com alto contraste.
-![Menu de Navegação](sua_imagem_do_menu.png)
-
-### 2. Captação de Doações (Call to Action)
-Seção dedicada ao incentivo de doações para o bazar, com linguagem clara e botão de ação direto.
-![Seção de Doação](sua_imagem_do_bazar.png)
-
-### 3. Central de Contatos e Localização
-Formulário de contato validado e integração com informações de endereço e redes sociais da instituição.
-![Página de Contatos](sua_imagem_dos_contatos.png)
+| **Roxo** | `#ba5bff` |
+| **Rosa** | `#ff6eaf` |
+| **Laranja** | `#ff9800` |
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -42,7 +28,7 @@ Formulário de contato validado e integração com informações de endereço e 
 | **Google Maps API** | (Planejado) Para localização geográfica da sede. |
 
 ## ⚙️ Funcionalidades Principais
-- [x] Design Responsivo (Adaptável a dispositivos móveis).
+- [ ] Design Responsivo (Adaptável a dispositivos móveis).
 - [ ] Formulário de contato funcional.
 - [ ] Integração direta com Botão de WhatsApp.
 - [ ] Catálogo digital para o Brechó/Bazar.
@@ -50,7 +36,7 @@ Formulário de contato validado e integração com informações de endereço e 
 ## 📂 Estrutura de Pastas
 ```text
 ├── /css        # Arquivos de estilização
-├── /img        # Prints e ícones da interface
+├── /img        # Ícones da interface e imagens temporárias.
 ├── /js         # Scripts de interação
 ├── index.html  # Página principal
 └── README.md   # Documentação do projeto
