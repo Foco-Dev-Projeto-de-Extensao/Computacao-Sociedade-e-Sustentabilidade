@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="siteORIG.css">
 
 </head>
 
@@ -160,7 +160,7 @@
     </div>
 
     <!-- Lado Direito: Lista de Cards -->
-    <div class="servicos-lista">                         <!-- essa parte do java é pro botao nao executar ação nenhuma... -->
+    <div class="servicos-lista">        <!-- essa parte do java é pro botao nao executar ação nenhuma do clique -->
   <a href="javascript:void(0)" class="servico-item">
     <p>Garantimos um lar seguro, alimentação e cuidados dignos 24 horas por dia.</p>
   </a>
@@ -179,6 +179,24 @@
 </div>
 
   </div>
+              <!--animação de aparecer-->
+  <script> 
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animar');
+        }
+      });
+    }, {
+      threshold: 0.2 
+    });
+
+    const cards = document.querySelectorAll('.servico-item');
+    cards.forEach((card) => observer.observe(card));
+  });
+  </script>
+
 
 </section>
 
@@ -207,19 +225,19 @@
           <div class="bazar-carousel-viewport">
             <div class="bazar-carousel-track" data-bazar-track>
               <div class="bazar-slide">
-                <img src="imagens/roupa.jpg" alt="Roupas">
+                <img src="imagens/ITENS/roupa.jpg" alt="Roupas">
                 <span>roupas</span>
               </div>
               <div class="bazar-slide">
-                <img src="imagens/tenis.jpg" alt="Sapatos">
+                <img src="imagens/ITENS/tenis.jpg" alt="Sapatos">
                 <span>sapatos</span>
               </div>
               <div class="bazar-slide">
-                <img src="imagens/acessorio.jpg" alt="Acessórios">
+                <img src="imagens/ITENS/acessorio.jpg" alt="Acessórios">
                 <span>acessorios</span>
               </div>
               <div class="bazar-slide">
-                <img src="imagens/brinquedo.jpg" alt="Brinquedos">
+                <img src="imagens/ITENS/brinquedo.jpg" alt="Brinquedos">
                 <span>brinquedos</span>
               </div>
             </div>
@@ -235,6 +253,7 @@
           Também contamos com um brechó solidário, onde itens doados são vendidos
           para apoiar e fortalecer nossos projetos sociais.
         </p>
+        <a href="javascript:void(0)" class="btn-loja">ACESSO À LOJA</a>
       </div>
     </div>
 
@@ -245,19 +264,19 @@
 
   <div class="categorias-lista-col">
     <div class="categoria-item" onclick="window.location='bazar.html'" style="cursor:pointer;">
-      <img src="imagens/roupa.jpg" alt="Roupas">
+      <img src="imagens/ITENS/roupa.jpg" alt="Roupas">
       <span>roupas</span>
     </div>
     <div class="categoria-item" onclick="window.location='bazar.html'" style="cursor:pointer;">
-      <img src="imagens/tenis.jpg" alt="Calçados">
+      <img src="imagens/ITENS/tenis.jpg" alt="Calçados">
       <span>calçados</span>
     </div>
     <div class="categoria-item" onclick="window.location='bazar.html'" style="cursor:pointer;">
-      <img src="imagens/acessorio.jpg" alt="Acessórios">
+      <img src="imagens/ITENS/acessorio.jpg" alt="Acessórios">
       <span>acessórios</span>
     </div>
     <div class="categoria-item" onclick="window.location='bazar.html'" style="cursor:pointer;">
-      <img src="imagens/brinquedo.jpg" alt="Brinquedos">
+      <img src="imagens/ITENS/brinquedo.jpg" alt="Brinquedos">
       <span>brinquedos</span>
     </div>
   </div>

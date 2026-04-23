@@ -1,6 +1,6 @@
 // index.js
 function copiarTelefone() {
-    // Em vez de deixar o número fixo no JS, pegamos o que está escrito no HTML
+
     const label = document.getElementById('tel-label');
     const numero = '(81) 3225-0151'; // O número que será copiado
 

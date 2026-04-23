@@ -178,27 +178,32 @@ header {
 
 /* ==============================================================  SEGUNDA SEÇÃO - SEÇÃO VALORES =============================================== */
 
+.valor-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
 .icone-valor {
-    position: absolute;  /* Deixa o ícone livre para se mover */
-    top: 20px;           /* Distância do topo */
-    right: 20px;         /* Distância da direita */
-    width: 40px;         /* Tamanho do ícone */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px; /* Reduzido de 40px */
     height: auto;
 }
 
 .valores-section {
   width: 100%;
-  padding: 60px 60px 100px 60px; /* Reduz o padding do topo de 100 para 60 */
+  padding: 40px 20px; /* Padding menor em cima/baixo e nas laterais */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .valores-titulo {
-  font-size: 110px;
+  font-size: 100px; /* Reduzido de 110px */
   font-weight: 800;
   letter-spacing: -2px;
-  margin-bottom: 60px;
+  margin-bottom: 40px; /* Reduzido de 60px */
   width: 100%;
   max-width: 1100px;
   text-align: center;
@@ -217,20 +222,25 @@ header {
 }
 
 .valor-content {
-  border-radius: 30px;
+  border-radius: 25px; /* Levemente menor */
   background: #f8f4eb;
   border: 3px solid #111;
-  padding: 30px;
-  height: 250px;
+  padding: 25px; /* Reduzido de 30px */
+  height: auto; /* IMPORTANTE: Mude de 250px para auto para o card se ajustar ao texto */
+  min-height: 180px; /* Define uma altura mínima menor que os 250px anteriores */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 8px 8px 0px #111; 
-  position: relative; /* Isso faz o card ser a "âncora" para o ícone */
-  padding: 30px;
+  box-shadow: 6px 6px 0px #111; /* Sombra levemente menor */
+  position: relative;
   opacity: 0;
   transform: translateY(50px);  
   transition: transform 0.3s ease, box-shadow 0.2s ease, opacity 0.8s ease-out;
+}
+
+.valor-content p {
+  font-size: 0.95rem; /* Fonte um pouco menor para economizar espaço */
+  line-height: 1.4;
 }
 
 .valor-content.aparecer {
@@ -358,10 +368,24 @@ header {
   box-shadow: 2px 2px 0px #111;   /* A sombra diminui */
 }
 
-/* ANIMAÇÃO DE APARECER em breve */
+/*ANIMAÇÃO DOS CARD'S ZINHOS*/
 
+/* Estado inicial dos cards (escondidos) */
+.servico-item {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: 
+  opacity 0.8s ease-out, 
+  transform 0.2s ease-out, 
+  background-color 0.2s ease, 
+  box-shadow 0.2s ease;
+}
 
-
+/* Quando a classe 'animar' entra, eles sobem para a posição original (0) */
+.servico-item.animar {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
@@ -398,7 +422,6 @@ header {
 .quarta-secao {
   padding: 80px 10%;
   color: #fff;
-
   background: url(imagens/FUNDOS/fundo4.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -444,6 +467,31 @@ header {
   font-size: clamp(16px, 1.5vw, 22px);
   line-height: 1.4;
   font-weight: 500;
+}
+
+.btn-loja {
+  margin-top: 50px;
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: #111;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0px #111;
+  transition: all 0.2s ease;
+}
+.btn-loja:hover {
+  transform: scale(1.05);
+  background-color: #ff5757;
+  color: #fff;
+}
+.btn-loja:active {
+  transform: translate(3px, 3px) scale(1.02);
+  box-shadow: 2px 2px 0px #111;
+  transition: all 0.1s;
 }
 
 /* === LINHA 2: CATEGORIAS + DOE PARA O BAZAR === */
@@ -743,4 +791,3 @@ footer {
   background-position: center center;
   background-attachment: fixed; 
 }
-
