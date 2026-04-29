@@ -673,21 +673,11 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 
----
+---------------------------------------------------------------------------
 
-## ⚖️ Licença e Créditos
+Copyright (C) 2024 Amanda Aziz, Mozart Moura e Instituição LarBEM.
 
-Este projeto é um software livre sob a licença **GNU GPLv3**.
+---------------------------------------------------------------------------
 
-### 👥 Autores Principais
-O desenvolvimento técnico, estratégico e documental foi realizado integralmente por:
-* **Amanda Aziz** - [GitHub](https://github.com/Amanda-Aziz)
-* **Mozart Moura** - [GitHub](https://github.com/mozartDemarias)
-
-### 🏛️ Instituição Beneficiada
-Este projeto foi desenvolvido como parte de um projeto de extensão universitária em prol da:
-* **LarBEM / Grupo Partilhar** (conforme o repositório)
-
----
-
-> *A reprodução ou uso deste material por terceiros é permitida desde que mantida a atribuição de autoria aos desenvolvedores citados e à respectiva instituição.*
+A reprodução ou uso deste material por terceiros é permitida desde que mantida 
+a atribuição de autoria aos desenvolvedores citados e à respectiva instituição.
