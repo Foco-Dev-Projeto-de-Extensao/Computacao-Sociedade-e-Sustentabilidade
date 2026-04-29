@@ -1,5 +1,6 @@
-## UNIVERSIDADE CATÓLICA DE PERNAMBUCO
-> Curso - Ciências da Computação
+> Este projeto é um software livre sob a licença **GNU GPLv3**.
+
+## UNIVERSIDADE CATÓLICA DE PERNAMBUCO - CC
 
 # 🌍 Computação, Sociedade e Sustentabilidade
 
