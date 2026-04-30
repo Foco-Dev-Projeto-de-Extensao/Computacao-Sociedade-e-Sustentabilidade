@@ -330,11 +330,23 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="ajudar-card">
-      <h3>PIX</h3>
-      <p>CNPJ:</p>
-      <p>11.017.993/0001-20</p>
-    </div>
+    <div class="ajudar-card" onclick="copiarCNPJ()" title="Clique para copiar o CNPJ" style="cursor: pointer;">
+  <h3>PIX</h3>
+  <p>CNPJ:</p>
+  <p>11.017.993/0001-20</p>
+  <span id="feedback" style="font-size: 12px; color: green; display: none;">Copiado!</span>
+</div>
+
+<script>
+function copiarCNPJ() {
+  const cnpj = '11.017.993/0001-20';
+  navigator.clipboard.writeText(cnpj).then(() => {
+    const fb = document.getElementById('feedback');
+    fb.style.display = 'inline';
+    setTimeout(() => fb.style.display = 'none', 2000);
+  });
+}
+</script>
 
     <!-- Card 3 -->
     <div class="ajudar-card">
